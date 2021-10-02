@@ -4,27 +4,8 @@
   <mat-label>Please pick a flight!</mat-label>
   <mat-select>
     <mat-option *ngFor="let flight of flights" value="flight.destination_place">
-      <!--                [class.selected]="flight === selectedFlight"-->
-      <!--                (click)="onSelect(flight)">-->
-      {{flight.destination_place}}
+      {{flight.departure_place}} → {{flight.destination_place}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-
-<!--<ul class="flights">-->
-<!--  <li *ngFor="let flight of flights"-->
-<!--      [class.selected]="flight === selectedFlight"-->
-<!--      (click)="onSelect(flight)">-->
-<!--    <span class="badge">{{flight.id}}</span> {{flight.destination_place}}-->
-<!--  </li>-->
-<!--</ul>-->
-
-<!--<div *ngIf="selectedFlight">-->
-<!--  <h2>{{selectedFlight.departure_place | uppercase}} Details</h2>-->
-<!--  <div><span>id: </span>{{selectedFlight.id}}</div>-->
-<!--  <div>-->
-<!--    <label for="hero-name">Flight name: </label>-->
-<!--    <input id="hero-name" [(ngModel)]="selectedFlight.destination_place" placeholder="name">-->
-<!--  </div>-->
-<!--</div>-->
 </div>
