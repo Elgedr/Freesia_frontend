@@ -1,7 +1,7 @@
 <div class="center"><h2>FLIGHTS:</h2></div>
 <div class="center">
 <mat-form-field appearance="fill">
-  <mat-label>Please pick a flight!</mat-label>
+  <mat-label >Please pick a flight!</mat-label>
   <mat-select>
     <mat-option *ngFor="let flight of flights" value="flight.destination_place">
       {{flight.departure_place}} → {{flight.destination_place}}

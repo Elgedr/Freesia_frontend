@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Freesia';
+  myImage = 'assets/images/space.jpg'
 }
+
