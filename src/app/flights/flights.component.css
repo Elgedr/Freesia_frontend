@@ -7,7 +7,16 @@ h2{
   color: #336699;
 }
 
-
-
+.button{
+  background-color: #336699;
+  border: none;
+  color: white;
+  padding: 5px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 10px;
+}
 
 
