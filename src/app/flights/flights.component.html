@@ -1,16 +1,19 @@
 <div class="center"><h2>FLIGHTS:</h2></div>
 <div class="center">
-<mat-form-field appearance="fill">
-  <mat-label >Please pick a flight!</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let flight of flights" value="flight.destination_place">
-      {{flight.departure_place}} → {{flight.destination_place}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-  <button class="button" (click)="showFlights()"> Go</button>
+  <mat-form-field appearance="fill">
+    <mat-label>Please pick a flight!</mat-label>
+    <mat-select [(ngModel)]="selecetdFlightdest">
+      <mat-option *ngFor="let flight of flights" [value]="flight.destination_place">
+        {{flight.departure_place}} → {{flight.destination_place}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button class="button" (click)="filterFlights()"> Go</button>
+  <!--  <button (click)="filterFlights()">Save</button>-->
+  <br>
+  selected destination place is {{selecetdFlightdest}}
 </div>
 
+<app-carousel-component></app-carousel-component>
 <fligtcard-component></fligtcard-component>
-
 

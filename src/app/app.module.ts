@@ -17,6 +17,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
 import { FligtcardComponent } from './fligtcard/fligtcard.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -42,8 +43,9 @@ import {MatCardModule} from "@angular/material/card";
     MatToolbarModule,
     MDBBootstrapModule.forRoot(),
     MatCardModule,
+    MatButtonModule,
   ],
-  providers: [],
+  providers: [FlightsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
