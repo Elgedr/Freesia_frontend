@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FLIGHTS} from "../mock-flights";
+import {FLIGHTS} from "../mock-elements/mock-flights";
 
 @Component({
   selector: 'app-flights',
@@ -9,6 +9,8 @@ import {FLIGHTS} from "../mock-flights";
 })
 export class FlightsComponent implements OnInit {
   flights = FLIGHTS;
+  showFlights(){
+  }
 
   constructor() { }
 

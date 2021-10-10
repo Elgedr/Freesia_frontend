@@ -15,6 +15,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import { ShipsComponent } from './ships/ships.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
+import { FligtcardComponent } from './fligtcard/fligtcard.component';
+import {MatCardModule} from "@angular/material/card";
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { CarouselComponentComponent } from './carousel-component/carousel-compon
     TabComponent,
     ShipsComponent,
     CarouselComponentComponent,
+    FligtcardComponent,
 
   ],
   imports: [
@@ -38,6 +41,7 @@ import { CarouselComponentComponent } from './carousel-component/carousel-compon
     MatTabsModule,
     MatToolbarModule,
     MDBBootstrapModule.forRoot(),
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
