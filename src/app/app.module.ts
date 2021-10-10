@@ -13,6 +13,8 @@ import { TabComponent } from './tab/tab.component';
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { ShipsComponent } from './ships/ships.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { ShipsComponent } from './ships/ships.component';
     FlightsComponent,
     TabComponent,
     ShipsComponent,
+    CarouselComponentComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import { ShipsComponent } from './ships/ships.component';
     MatSelectModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

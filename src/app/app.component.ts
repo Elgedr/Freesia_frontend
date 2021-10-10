@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
   preserveWhitespaces: true
 })
 export class AppComponent {
+
   title = 'Freesia';
   myImage = 'assets/images/space.jpg'
 }
+
 
