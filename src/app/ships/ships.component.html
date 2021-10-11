@@ -1,4 +1,8 @@
-<!--<div >-->
-<!--  <img src="assets\img\ship1.jpg" alt="">-->
-<!--</div>-->
-<app-shipcard *ngFor="let ship of ships" [ship]="ship" ></app-shipcard>
+<div class="container">
+  <div class="row" *ngFor="let row of shipRows">
+    <div class="col-md-3 mx-auto my-5"
+         *ngFor="let ship of ships.slice(row * numOfShipsInRow, row * numOfShipsInRow + numOfShipsInRow)">
+      <app-shipcard [ship]="ship"></app-shipcard>
+    </div>
+  </div>
+</div>

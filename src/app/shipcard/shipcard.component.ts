@@ -11,7 +11,11 @@ import {Ship} from "../ship";
 export class ShipcardComponent implements OnInit {
   ships = SHIPS;
   @Input() ship!: Ship;
-
+  images = [
+    {img: "assets\\img\\ship1.jpg"},
+    {img: "assets\\img\\ship2.jpg"},
+    {img: "assets\\img\\ship3.jpg"}
+  ]
 
 
   constructor() {

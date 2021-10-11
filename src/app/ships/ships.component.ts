@@ -8,7 +8,8 @@ import {SHIPS} from "../mock-elements/mock-ships";
 })
 export class ShipsComponent implements OnInit {
   ships = SHIPS;
-  a = 0;
+  numOfShipsInRow: number = 3;
+  shipRows: number[] = [];
   images = [
     {img: "assets\\img\\ship1.jpg"},
     {img: "assets\\img\\ship2.jpg"},
@@ -17,6 +18,10 @@ export class ShipsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const numOfRows = SHIPS.length / this.numOfShipsInRow;
+    for (let i = 0; i < numOfRows; i++) {
+      this.shipRows.push(i);
+    }
   }
 
 
