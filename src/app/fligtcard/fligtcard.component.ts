@@ -1,6 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {FLIGHTS} from "../mock-elements/mock-flights";
-import {FlightsComponent} from "../flights/flights.component";
 import {Flight} from "../flight";
 
 /**
@@ -13,10 +12,9 @@ import {Flight} from "../flight";
 })
 export class FligtcardComponent {
   flights = FLIGHTS;
-  filteredF : Flight[] = [];
+  @Input() flight!: Flight;
 
-  constructor(private flightComponent: FlightsComponent) {
-    this.filteredF = this.flightComponent.filteredFlightsList
+  constructor() {
 
   }
 }
