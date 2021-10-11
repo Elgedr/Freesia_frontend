@@ -18,6 +18,7 @@ import { CarouselComponentComponent } from './carousel-component/carousel-compon
 import { FligtcardComponent } from './fligtcard/fligtcard.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { ShipcardComponent } from './shipcard/shipcard.component';
 
 
@@ -29,8 +30,8 @@ import { ShipcardComponent } from './shipcard/shipcard.component';
     ShipsComponent,
     CarouselComponentComponent,
     FligtcardComponent,
-    ShipcardComponent,
-
+    FlightDetailsComponent,
+    ShipcardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +46,9 @@ import { ShipcardComponent } from './shipcard/shipcard.component';
     MatToolbarModule,
     MDBBootstrapModule.forRoot(),
     MatCardModule,
-    MatButtonModule,
+    MatButtonModule
   ],
-  providers: [FlightsComponent],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,6 +14,7 @@ export class FligtcardComponent {
   flights = FLIGHTS;
   @Input() flight!: Flight;
 
+
   constructor() {
 
   }
