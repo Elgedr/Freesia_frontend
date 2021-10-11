@@ -13,7 +13,6 @@ export class FlightsComponent implements OnInit {
   selecetdFlightdest: string = "";
   filteredFlightsList: Flight[] = FLIGHTS
 
-
   public filterFlights() {
     this.filteredFlightsList = []
     for (let flight = 0; flight < this.flights.length; flight++) {
@@ -21,7 +20,6 @@ export class FlightsComponent implements OnInit {
         this.filteredFlightsList.push(this.flights[flight])
       }
     }
-    return this.filteredFlightsList
   }
 
 
