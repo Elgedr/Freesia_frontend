@@ -14,7 +14,13 @@ export class ShipcardComponent implements OnInit {
   images = [
     {img: "assets\\img\\ship1.jpg"},
     {img: "assets\\img\\ship2.jpg"},
-    {img: "assets\\img\\ship3.jpg"}
+    {img: "assets\\img\\ship3.jpg"},
+    {img: "assets\\img\\ship4.jpg"},
+    {img: "assets\\img\\ship5.jpg"},
+    {img: "assets\\img\\ship6.jpg"},
+    {img: "assets\\img\\ship7.jpg"},
+    {img: "assets\\img\\ship8.jpg"},
+    {img: "assets\\img\\ship9.jpg"}
   ]
 
 

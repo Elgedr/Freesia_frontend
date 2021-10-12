@@ -20,6 +20,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { ShipcardComponent } from './shipcard/shipcard.component';
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ShipcardComponent } from './shipcard/shipcard.component';
     CarouselComponentComponent,
     FligtcardComponent,
     FlightDetailsComponent,
-    ShipcardComponent
+    ShipcardComponent,
+    ShipDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,20 @@
+<div class="card" style="max-width: 18rem;" *ngFor="let f of flights">
+  <div class="card-header">{{ship.name}}</div>
+  <div class="card-body text-primary">
+    <p class="card-text" > </p>
+    <ul>
+      <div>
+        {{f.departure_place}} → {{f.destination_place}}
+      </div>
+      <div>
+        Departure time {{f.departure_time}}
+      </div>
+      <div>
+        Arrival time {{f.arrival_time}}
+      </div>
+
+    </ul>
+
+
+  </div>
+</div>

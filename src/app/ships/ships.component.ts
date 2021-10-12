@@ -10,11 +10,6 @@ export class ShipsComponent implements OnInit {
   ships = SHIPS;
   numOfShipsInRow: number = 3;
   shipRows: number[] = [];
-  images = [
-    {img: "assets\\img\\ship1.jpg"},
-    {img: "assets\\img\\ship2.jpg"},
-    {img: "assets\\img\\ship3.jpg"}
-  ]
   constructor() { }
 
   ngOnInit(): void {

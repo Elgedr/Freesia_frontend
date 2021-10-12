@@ -5,7 +5,7 @@
     <p>Number of places: {{ship.num_of_places}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-stroked-button>SHOW FLIGHTS</button>
+    <button mat-raised-button style="font-family: Arial,serif; color: #336699"  [routerLink]="[ship.id, 'flights']">Show flights</button>
   </mat-card-actions>
 </mat-card>
 
