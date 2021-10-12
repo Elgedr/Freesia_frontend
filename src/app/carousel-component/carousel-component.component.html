@@ -1,5 +1,13 @@
-<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" *ngIf="nasaImgObj">
 
+  <mdb-carousel-item>
+  <img
+    class="d-block w-100 p-3 mx-auto cssCenterImage"
+    [src]="nasaImgObj.hdurl"
+    alt="NASA API photo of the day"
+    *ngIf="nasaImgObj.media_type === 'image'"
+  />
+  </mdb-carousel-item>
   <mdb-carousel-item>
     <img class="d-block w-100 p-3 mx-auto" src="assets\img\Grad_ZarandiRocket_BannerImage_1500x650_iStock-487797752.jpg"
          alt="Second slide">
@@ -13,8 +21,3 @@
     <img class="d-block w-75 p-3 mx-auto" src="assets\img\ff .png" alt="First slide">
   </mdb-carousel-item>
 </mdb-carousel>
-
-
-
-
-

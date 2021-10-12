@@ -10,7 +10,7 @@ describe('CarouselComponentComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ CarouselComponentComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

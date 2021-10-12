@@ -1,1 +1,54 @@
+.cssCenterImage{
+  height:400px;
+  object-fit:cover;
+}
 
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nasa-card {
+  max-width: 800px;
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.header-image {
+  background-image: url("src/assets/img/file-20210707-25-2zom23.jpg");
+  background-size: cover;
+}
+
+mat-icon {
+  font-size: 18px;
+  margin: 0 4px 0 0;
+  height: 18px;
+  width: 18px;
+}
+
+.bottom-buttons button {
+  padding: 0;
+  margin: 8px;
+}
+
+.credit-para {
+  margin: auto 8px;
+}
+
+#video {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

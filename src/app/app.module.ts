@@ -21,6 +21,9 @@ import {MatButtonModule} from "@angular/material/button";
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { ShipcardComponent } from './shipcard/shipcard.component';
 import { FlightBookingComponent } from './flight-booking/flight-booking.component';
+import {MatIconModule} from "@angular/material/icon";
+import {SafePipeModule} from "safe-pipe";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -33,7 +36,7 @@ import { FlightBookingComponent } from './flight-booking/flight-booking.componen
     FligtcardComponent,
     FlightDetailsComponent,
     ShipcardComponent,
-    FlightBookingComponent
+    FlightBookingComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,10 @@ import { FlightBookingComponent } from './flight-booking/flight-booking.componen
     MatToolbarModule,
     MDBBootstrapModule.forRoot(),
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    SafePipeModule,
+    HttpClientModule
   ],
   providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent],
   bootstrap: [AppComponent]
