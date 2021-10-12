@@ -1,4 +1,4 @@
-.cssCenterImage{
-  height:400px;
-  object-fit:cover;
+img {
+  height: 540px;
+  object-fit: cover;
 }
