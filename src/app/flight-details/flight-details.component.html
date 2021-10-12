@@ -1,11 +1,13 @@
+<body>
 <div class="card">
 
-  <img class="card-img-top" src="assets\img\file-20210707-25-2zom23.jpg" alt="Card image cap">
+<!--  <img class="card-img-top" src="assets\img\file-20210707-25-2zom23.jpg" alt="Card image cap">-->
   <div class="card-body">
     <h2 class="card-title" style="color: #336699 ">Flight to
       the {{particularFlight.destination_place}} !</h2>
 
   </div>
+
 
   <ul type="circle">
     <li>
@@ -29,8 +31,9 @@
 
 
   <div class="card-body">
-    <button style="color: #336699; font-family: Arial,serif; " mat-raised-button> Book a seat to this
+    <button style="color: #336699; font-family: Arial,serif;"  [routerLink]="['/flights', particularFlight.id, 'booking']" mat-raised-button> Book a seat to this
       flight
     </button>
   </div>
 </div>
+</body>
