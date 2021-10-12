@@ -24,7 +24,7 @@ import { FlightBookingComponent } from './flight-booking/flight-booking.componen
 import {MatIconModule} from "@angular/material/icon";
 import {SafePipeModule} from "safe-pipe";
 import {HttpClientModule} from "@angular/common/http";
-
+import { ShipDetailsComponent } from './ship-details/ship-details.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,8 @@ import {HttpClientModule} from "@angular/common/http";
     FlightDetailsComponent,
     ShipcardComponent,
     FlightBookingComponent,
+    ShipDetailsComponent
+
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import {HttpClientModule} from "@angular/common/http";
     MatIconModule,
     SafePipeModule,
     HttpClientModule
+
   ],
   providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent],
   bootstrap: [AppComponent]

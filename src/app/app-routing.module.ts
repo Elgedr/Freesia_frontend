@@ -5,6 +5,7 @@ import {ShipsComponent} from "./ships/ships.component";
 import {AppComponent} from "./app.component";
 import {FlightDetailsComponent} from "./flight-details/flight-details.component";
 import {FlightBookingComponent} from "./flight-booking/flight-booking.component";
+import {ShipDetailsComponent} from "./ship-details/ship-details.component";
 
 const routes: Routes = [
   {path: ' ', component: AppComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'ships', component: ShipsComponent},
   {path: 'flights/:id/details', component: FlightDetailsComponent},
   {path: 'flights/:id/booking', component: FlightBookingComponent},
+  {path: 'ships/:id/flights', component: ShipDetailsComponent}
 ];
 
 
