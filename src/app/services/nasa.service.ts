@@ -4,6 +4,7 @@ import { catchError, take } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 
 import { Apod } from "../models/apod";
+import { Donki } from "../models/donki";
 import { environment } from "../../environments/environment";
 
 @Injectable({
@@ -24,6 +25,17 @@ export class NasaService {
       take(1),
       catchError((err: any) => {
         return throwError("Problem fetching apod from NASA API, error: ", err);
+      })
+    );
+  }
+
+  public getGeomagneticStorm(): Observable<Donki[]> {
+    this.apiKey = environment.NASA_KEY;
+    const gstUrl = `https://api.nasa.gov/DONKI/GST?api_key=${this.apiKey}`;
+    return this.http.get<Donki[]>(gstUrl).pipe(
+      take(1),
+      catchError((err: any) => {
+        return throwError("Problem fetching Donki from NASA API, error: ", err);
       })
     );
   }
