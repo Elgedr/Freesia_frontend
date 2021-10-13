@@ -1,8 +1,12 @@
+<h1> Please enter your personal information</h1>
 <form>
+
+
   <div class="form-row">
     <div class="col-md-3 mb-3">
       <label for="firstName">First Name</label>
-      <input ngModel name="firstname" #firstName="ngModel" type="text" class="form-control" id="firstName"
+      <input [(ngModel)]="fname" ngModel name="firstname" #firstName="ngModel" type="text" class="form-control"
+             id="firstName"
              placeholder="Jack" required pattern="^[a-zA-Z \-\']+">
       <div class="textsAlert" *ngIf="firstName.errors?.pattern">
         First name should only consist of letters
@@ -15,7 +19,8 @@
 
     <div class="col-md-3 mb-3">
       <label for="lastname">Last Name</label>
-      <input ngModel name="lastname" #lastName="ngModel" type="text" class="form-control" id="lastname"
+      <input [(ngModel)]="lname" ngModel name="lastname" #lastName="ngModel" type="text" class="form-control"
+             id="lastname"
              placeholder="Smith" required pattern="^[a-zA-Z \-\']+">
       <div class="textsAlert" *ngIf="lastName.errors?.pattern">
         Last name should only consist of letters
@@ -28,7 +33,8 @@
 
     <div class="col-md-3 mb-3">
       <label for="phone">Phone number</label>
-      <input ngModel name="phone" #phonenr="ngModel" type="text" class="form-control" id="phone"
+      <input [(ngModel)]="phoneNumber" ngModel name="phone" #phonenr="ngModel" type="text" class="form-control"
+             id="phone"
              placeholder="1234567" required pattern="^[0-9]*$" minlength="6">
       <div class="textsAlert" *ngIf="phonenr.errors?.pattern">
         Phone number should only consist of digits
@@ -43,7 +49,8 @@
 
     <div class="col-md-3 mb-3">
       <label for="email">E-mail address</label>
-      <input ngModel name="email" #emailAddress="ngModel" type="text" class="form-control" id="email"
+      <input [(ngModel)]="email" ngModel name="email" #emailAddress="ngModel" type="text" class="form-control"
+             id="email"
              placeholder="example@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
       <div class="textsAlert" *ngIf="emailAddress.errors?.pattern">
         Email addres is not matching pattern username@post.abc
@@ -54,7 +61,11 @@
     </div>
 
   </div>
-  <button class="btn btn-dark" type="submit" style="font-family: Arial,serif; background-color: #333333">Submit
+  <button [routerLink]="['/bookingSucceed']"
+          [disabled]="firstName.invalid || lastName.invalid || emailAddress.invalid || phonenr.invalid"
+          class="btn btn-dark" type="submit"
+          (click)="createPassenger()"
+          style="color: white; font-family: Arial,serif;">Submit
     form
   </button>
 </form>

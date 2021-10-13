@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {User} from "../user";
 
 @Component({
   selector: 'app-users-info-form',
@@ -6,14 +7,26 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./users-info-form.component.css']
 })
 export class UsersInfoFormComponent implements OnInit {
-  titleMessage = 'Please choose a username.';
+  createdPassenger !: User;
+  id = 0;
+  fname !: string;
+  lname !: string;
+  phoneNumber !: number;
+  email !: string;
+
 
   constructor() {
   }
 
-  changeTitle(message: string) {
-    this.titleMessage = message;
+  createPassenger() {
+    console.log('it does nothing', this.fname);
+    console.log('it does nothing', this.lname);
+    console.log('it does nothing', this.phoneNumber);
+    console.log('it does nothing', this.email);
+
+
   }
+
 
   ngOnInit(): void {
   }

@@ -26,6 +26,7 @@ import {SafePipeModule} from "safe-pipe";
 import {HttpClientModule} from "@angular/common/http";
 import { ShipDetailsComponent } from './ship-details/ship-details.component';
 import { UsersInfoFormComponent } from './users-info-form/users-info-form.component';
+import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UsersInfoFormComponent } from './users-info-form/users-info-form.compon
     ShipcardComponent,
     FlightBookingComponent,
     ShipDetailsComponent,
-    UsersInfoFormComponent
+    UsersInfoFormComponent,
+    BookignSucceedComponent
 
   ],
   imports: [

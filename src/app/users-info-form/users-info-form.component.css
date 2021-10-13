@@ -12,12 +12,19 @@
 }
 
 form {
-  margin: 100px 60px 60px;
+  margin: 50px 60px 60px;
   /*margin-left: 800px;*/
 }
 
 form label {
   display: block;
   margin: 10px 0px;
+}
+
+h1{
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 40px;
+
 }
 

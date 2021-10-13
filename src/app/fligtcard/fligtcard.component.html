@@ -6,7 +6,7 @@
       <p>Arrival Time: {{flight.arrival_time}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button style="font-family: Arial,serif; color: #336699"  [routerLink]="[flight.id, 'details']">Show details</button>
+      <button mat-raised-button style="font-family: Arial,serif; color: #336699"  [routerLink]="[flight.id,flight.ship_id, 'details']">Show details</button>
     </mat-card-actions>
   </mat-card>
 </div>
