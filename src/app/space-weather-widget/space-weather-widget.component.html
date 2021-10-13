@@ -1,0 +1,37 @@
+<mat-card class="mat-elevation-z5" style="text-align: center;">
+
+  <mat-card-title>
+    <mat-card-title>Space weather</mat-card-title>
+    <mat-card-subtitle>Today: {{date}}</mat-card-subtitle>
+  </mat-card-title>
+
+  <mat-card-content>
+    <div class="flex-row">
+      <div class="temp">
+        <span class="big-text">{{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].kpIndex}}</span>
+        <span class="big-text">KP-INDEX</span>
+        <span class="small">The Kp-index describes the disturbance of the Earth’s magnetic field caused by the solar wind.</span>
+        <br>
+        <button mat-raised-button
+                matTooltip="0-2	— Quiet
+                3	— Unsettled
+                4	—	Active
+                5	—	Minor storm; average frequency 900 days per cycle
+                6	— Moderate storm; average frequency 360 days per cycle
+                7	—	Strong storm; average frequency 130 days per cycle
+                8	—	Severe storm; average frequency 60 days per cycle
+                9	—	Extreme storm; average frequency 4 days per cycle">
+          Kp-indexes table
+        </button>
+      </div>
+      <div class="outlook">
+        <img src="assets/img/gst_icon.png" alt="Geomagnetic storm"/>
+        <span>Geomagnetic storm start date:<br></span>
+        <span>{{nasaGeoMagnetic.startTime}}<br></span>
+        <span>Last observed at:<br></span>
+        <span> {{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].observedTime}}<br></span>
+      </div>
+    </div>
+  </mat-card-content>
+
+</mat-card>

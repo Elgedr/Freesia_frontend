@@ -25,6 +25,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {SafePipeModule} from "safe-pipe";
 import {HttpClientModule} from "@angular/common/http";
 import { ShipDetailsComponent } from './ship-details/ship-details.component';
+import { SpaceWeatherWidgetComponent } from './space-weather-widget/space-weather-widget.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 import { UsersInfoFormComponent } from './users-info-form/users-info-form.component';
 import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.component';
 
@@ -39,6 +41,8 @@ import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.compo
     FlightDetailsComponent,
     ShipcardComponent,
     FlightBookingComponent,
+    ShipDetailsComponent,
+    SpaceWeatherWidgetComponent,
     ShipDetailsComponent,
     UsersInfoFormComponent,
     BookignSucceedComponent
@@ -60,8 +64,8 @@ import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.compo
     MatButtonModule,
     MatIconModule,
     SafePipeModule,
-    HttpClientModule
-
+    HttpClientModule,
+    MatTooltipModule,
   ],
   providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent],
   bootstrap: [AppComponent]
