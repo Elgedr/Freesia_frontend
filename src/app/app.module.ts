@@ -25,6 +25,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {SafePipeModule} from "safe-pipe";
 import {HttpClientModule} from "@angular/common/http";
 import { ShipDetailsComponent } from './ship-details/ship-details.component';
+import { UsersInfoFormComponent } from './users-info-form/users-info-form.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ShipDetailsComponent } from './ship-details/ship-details.component';
     FlightDetailsComponent,
     ShipcardComponent,
     FlightBookingComponent,
-    ShipDetailsComponent
+    ShipDetailsComponent,
+    UsersInfoFormComponent
 
   ],
   imports: [

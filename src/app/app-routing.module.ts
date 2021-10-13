@@ -6,6 +6,7 @@ import {AppComponent} from "./app.component";
 import {FlightDetailsComponent} from "./flight-details/flight-details.component";
 import {FlightBookingComponent} from "./flight-booking/flight-booking.component";
 import {ShipDetailsComponent} from "./ship-details/ship-details.component";
+import {UsersInfoFormComponent} from "./users-info-form/users-info-form.component";
 
 const routes: Routes = [
   {path: ' ', component: AppComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'ships', component: ShipsComponent},
   {path: 'flights/:id/details', component: FlightDetailsComponent},
   {path: 'flights/:id/booking', component: FlightBookingComponent},
-  {path: 'ships/:id/flights', component: ShipDetailsComponent}
+  {path: 'ships/:id/flights', component: ShipDetailsComponent},
+  {path: 'form', component: UsersInfoFormComponent}
 ];
 
 
