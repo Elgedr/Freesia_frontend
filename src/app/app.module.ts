@@ -29,6 +29,14 @@ import { SpaceWeatherWidgetComponent } from './space-weather-widget/space-weathe
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { UsersInfoFormComponent } from './users-info-form/users-info-form.component';
 import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import {NzIconModule} from "ng-zorro-antd/icon";
+import {NzLayoutModule} from "ng-zorro-antd/layout";
+import {NzGridModule} from "ng-zorro-antd/grid";
+import {NzTypographyModule} from "ng-zorro-antd/typography";
+import {NzSpaceModule} from "ng-zorro-antd/space";
+import {NzCardModule} from "ng-zorro-antd/card";
 
 @NgModule({
   declarations: [
@@ -66,6 +74,14 @@ import { BookignSucceedComponent } from './bookign-succeed/bookign-succeed.compo
     SafePipeModule,
     HttpClientModule,
     MatTooltipModule,
+    MatGridListModule,
+    NzButtonModule,
+    NzIconModule,
+    NzLayoutModule,
+    NzGridModule,
+    NzTypographyModule,
+    NzSpaceModule,
+    NzCardModule
   ],
   providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent],
   bootstrap: [AppComponent]
