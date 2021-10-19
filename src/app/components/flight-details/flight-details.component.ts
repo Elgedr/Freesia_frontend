@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Flight} from "../flight";
+import {Flight} from "../../models/flight";
 import {ActivatedRoute} from '@angular/router';
-import {FLIGHTS} from "../mock-elements/mock-flights";
-import {SHIPS} from "../mock-elements/mock-ships";
-import {Ship} from "../ship";
+import {FLIGHTS} from "../../mock-elements/mock-flights";
+import {SHIPS} from "../../mock-elements/mock-ships";
+import {Ship} from "../../models/ship";
 
 @Component({
   selector: 'app-flight-details',
@@ -29,7 +29,7 @@ export class FlightDetailsComponent implements OnInit {
   }
 
   findShip() {
-    this.flightsShip = SHIPS.filter(s => s.id == this.particularFlight.ship_id)[0];
+    this.flightsShip = SHIPS.filter(s => s.id == this.particularFlight.shipId)[0];
     // for (let ship = 0; ship < SHIPS.length; ship++) {
     //   if (SHIPS[ship].id == this.particularFlight.ship_id) {
     //     this.flightsShip = SHIPS[ship];

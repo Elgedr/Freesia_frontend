@@ -1,4 +1,4 @@
-import {Ship} from "../ship";
+import {Ship} from "../models/ship";
 
 export const SHIPS: Ship[] = [
   {id: 0, name: "RS-419", num_of_places: 10, num_of_available_places: 10},

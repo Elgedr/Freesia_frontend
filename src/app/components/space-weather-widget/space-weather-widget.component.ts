@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NasaService } from "../services/nasa.service";
-import { Donki } from "../models/donki";
+import { NasaService } from "../../services/nasa.service";
+import { Donki } from "../../models/donki";
 
 @Component({
   selector: 'app-space-weather-widget',

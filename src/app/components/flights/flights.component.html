@@ -3,8 +3,8 @@
   <mat-form-field appearance="fill">
     <mat-label>Please pick a flight!</mat-label>
     <mat-select [(ngModel)]="selecetdFlightdest">
-      <mat-option *ngFor="let flight of flights" [value]="flight.destination_place">
-        {{flight.departure_place}} → {{flight.destination_place}}
+      <mat-option *ngFor="let flight of flights" [value]="flight.destinationPlace">
+        {{flight.departurePlace}} → {{flight.destinationPlace}}
       </mat-option>
     </mat-select>
   </mat-form-field>
@@ -18,6 +18,6 @@
 
 <app-space-weather-widget></app-space-weather-widget>
 
-<fligtcard-component *ngFor="let flight of filteredFlightsList" [flight]="flight"></fligtcard-component>
+<fligtcard-component *ngFor="let flight of flights" [flight]="flight"></fligtcard-component>
 
 

@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {FLIGHTS} from "../mock-elements/mock-flights";
-import {Flight} from "../flight";
-import {Ship} from "../ship";
-import {SHIPS} from "../mock-elements/mock-ships";
+import {FLIGHTS} from "../../mock-elements/mock-flights";
+import {Flight} from "../../models/flight";
+import {Ship} from "../../models/ship";
+import {SHIPS} from "../../mock-elements/mock-ships";
 
 @Component({
   selector: 'app-ship-details',
@@ -20,7 +20,7 @@ export class ShipDetailsComponent implements OnInit {
 
   getFightsForShip() {
     for (let i = 0; i < FLIGHTS.length; i++) {
-      if (FLIGHTS[i].ship_id == this.shipId) {
+      if (FLIGHTS[i].shipId == this.shipId) {
         this.flights.push(FLIGHTS[i])
       }
 
