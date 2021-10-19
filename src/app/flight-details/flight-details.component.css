@@ -1,29 +1,30 @@
 
-.card{
+.card {
   width: 400px;
   height: 400px;
   display: block;
-  margin: 50px auto 100px;
+  margin: auto auto 100px;
 }
 
-h3{
+h3 {
   text-align: center;
   margin-top: 50px;
 }
 
-p{
+p {
   font-family: Arial, sans-seriff, cursive;
 }
 
-body{
-  background-image: url("http://cdn.eso.org/images/screen/eso1213a.jpg");
+body {
   margin-top: 100px;
 }
 
-button{
+button {
   margin-top: 80px;
 }
 
-
+.space {
+  background-image: url("http://cdn.eso.org/images/screen/eso1213a.jpg");
+}
 
 

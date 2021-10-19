@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from "../user";
+import {USERS} from "../mock-elements/mock-users";
 
 @Component({
   selector: 'app-users-info-form',
@@ -8,11 +9,11 @@ import {User} from "../user";
 })
 export class UsersInfoFormComponent implements OnInit {
   createdPassenger !: User;
-  id = 0;
   fname !: string;
   lname !: string;
   phoneNumber !: number;
   email !: string;
+  static id: number = 0;
 
 
   constructor() {
@@ -23,7 +24,18 @@ export class UsersInfoFormComponent implements OnInit {
     console.log('it does nothing', this.lname);
     console.log('it does nothing', this.phoneNumber);
     console.log('it does nothing', this.email);
-    // this.createPassenger =  new User (this.id, this.lname, this.fname, this.email, this.phoneNumber)
+    console.log('it does nothing', UsersInfoFormComponent.id);
+    this.createdPassenger = {
+      pid: UsersInfoFormComponent.id,
+      passenger_lastname : this.lname,
+      passenger_firstname : this.fname,
+      passenger_email : this.email,
+      passenger_phone : this.phoneNumber,
+      place_number: 0,
+      ship_id : 0
+    }
+    USERS.push(this.createdPassenger)
+    console.log('ALL CREATED USERS', USERS)
 
 
   }
