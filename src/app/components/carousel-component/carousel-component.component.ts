@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NasaService } from "../services/nasa.service";
-import { Apod } from "../models/apod";
+import { NasaService } from "../../services/nasa.service";
+import { Apod } from "../../models/apod";
 
 @Component({
   selector: 'app-carousel-component',

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Seat} from "../models/seat";
+import {Seat} from "../../models/seat";
 
 @Component({
   selector: 'app-flight-booking',

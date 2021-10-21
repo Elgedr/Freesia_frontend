@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Flight} from "../flight";
-import {SHIPS} from "../mock-elements/mock-ships";
-import {Ship} from "../ship";
+import {Flight} from "../../models/flight";
+import {SHIPS} from "../../mock-elements/mock-ships";
+import {Ship} from "../../models/ship";
 
 @Component({
   selector: 'app-shipcard',

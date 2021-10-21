@@ -1,0 +1,17 @@
+<div class="main-div">
+  <mat-card>
+    <mat-card-title>Flight from {{flight.departurePlace}} to the {{flight.destinationPlace}} </mat-card-title>
+    <mat-card-content>
+      <p>Departure Time: {{flight.departureTime}}</p>
+      <p>Arrival Time: {{flight.arrivalTime}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button style="font-family: Arial,serif; color: #336699"  [routerLink]="[flight.id,flight.shipId, 'details']">Show details</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+
