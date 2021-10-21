@@ -16,6 +16,7 @@ export class FlightBookingComponent implements OnInit {
   numberOfSeats = 60;
   seats: Seat[] = []
   chosen: Seat[] = []
+  isBeingReserved: boolean = false;
 
   constructor(private route: ActivatedRoute, private flightService: FlightService) {
   }
@@ -42,9 +43,11 @@ export class FlightBookingComponent implements OnInit {
     const index: number = this.chosen.indexOf(seat);
     if (index !== -1) {
       seat.reserved = false;
+      this.isBeingReserved = false;
       this.chosen.splice(index, 1);
     } else {
       seat.reserved = true;
+      this.isBeingReserved = true;
       this.chosen.push(seat);
     }
   }
