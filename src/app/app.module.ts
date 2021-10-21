@@ -39,6 +39,7 @@ import {NzSpaceModule} from "ng-zorro-antd/space";
 import {NzCardModule} from "ng-zorro-antd/card";
 import {TestService} from "./services/test.service";
 import {FlightService} from "./services/flight.service";
+import {ShipService} from "./services/ship.service";
 
 // @ts-ignore
 @NgModule({
@@ -86,7 +87,7 @@ import {FlightService} from "./services/flight.service";
     NzSpaceModule,
     NzCardModule
   ],
-  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService],
   bootstrap: [AppComponent]
 })
 

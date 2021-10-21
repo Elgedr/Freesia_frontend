@@ -2,7 +2,7 @@
   <mat-card-title>{{ship.name}}</mat-card-title>
   <img mat-card-image src="{{images[ship.id].img}}" alt="">
   <mat-card-content>
-    <p>Number of places: {{ship.num_of_places}}</p>
+    <p>Number of places: {{ship.numOfPlaces}}</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button style="font-family: Arial,serif; color: #336699"  [routerLink]="[ship.id, 'flights']">Show flights</button>

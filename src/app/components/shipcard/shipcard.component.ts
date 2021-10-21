@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Flight} from "../../models/flight";
-import {SHIPS} from "../../mock-elements/mock-ships";
 import {Ship} from "../../models/ship";
+import {ShipService} from "../../services/ship.service";
 
 @Component({
   selector: 'app-shipcard',
@@ -9,7 +8,7 @@ import {Ship} from "../../models/ship";
   styleUrls: ['./shipcard.component.css']
 })
 export class ShipcardComponent implements OnInit {
-  ships = SHIPS;
+  ships: Ship[]= [];
   @Input() ship!: Ship;
   images = [
     {img: "assets\\img\\ship1.jpg"},
@@ -24,10 +23,13 @@ export class ShipcardComponent implements OnInit {
   ]
 
 
-  constructor() {
+  constructor(private  shipService: ShipService) {
   }
 
   ngOnInit(): void {
+    this.shipService.getAllShips().subscribe((res: Ship[])=>{
+      this.ships = res;
+    })
   }
 
 }

@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FLIGHTS} from "../../mock-elements/mock-flights";
 import {Flight} from "../../models/flight";
-import {TestService} from "../../services/test.service";
 import {FlightService} from "../../services/flight.service";
 
 @Component({
@@ -20,6 +18,7 @@ export class FlightsComponent implements OnInit {
   }
 
   public filterFlights() {
+    this.filteredFlightsList = []
     for (let flight = 0; flight < this.flights.length; flight++) {
       if (this.flights[flight].destinationPlace == this.selecetdFlightdest) {
         this.filteredFlightsList.push(this.flights[flight])
@@ -35,6 +34,7 @@ export class FlightsComponent implements OnInit {
   ngOnInit(): void {
     this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
+      this.filteredFlightsList = res;
     })
   }
 
