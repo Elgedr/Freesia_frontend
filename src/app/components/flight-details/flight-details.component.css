@@ -1,3 +1,4 @@
+
 .card {
   width: 400px;
   height: 400px;
@@ -24,6 +25,7 @@ button {
 
 .space {
   background-image: url("http://cdn.eso.org/images/screen/eso1213a.jpg");
+  margin-top: 150px;
 }
 
 
