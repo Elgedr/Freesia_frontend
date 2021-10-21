@@ -13,19 +13,18 @@ import {FlightService} from "../../services/flight.service";
 export class FlightsComponent implements OnInit {
   flights: Flight[] = [];
   selecetdFlightdest: string = "";
-  filteredFlightsList: Flight[] = FLIGHTS
+  filteredFlightsList: Flight[] = []
 
   constructor(private flightService: FlightService) {
 
   }
 
   public filterFlights() {
-    // this.filteredFlightsList = []
-    // for (let flight = 0; flight < this.flights.length; flight++) {
-    //   if (this.flights[flight].destination_place == this.selecetdFlightdest) {
-    //     this.filteredFlightsList.push(this.flights[flight])
-    //   }
-    // }
+    for (let flight = 0; flight < this.flights.length; flight++) {
+      if (this.flights[flight].destinationPlace == this.selecetdFlightdest) {
+        this.filteredFlightsList.push(this.flights[flight])
+      }
+    }
     // this.flightService.testRequest().subscribe((res: Flight) => {
     //   console.log(res)
     // })
