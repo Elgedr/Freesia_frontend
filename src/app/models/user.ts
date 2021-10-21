@@ -1,5 +1,5 @@
 export interface User{
-  id: number;
+  pid: number;
   ship_id: number;
   place_number: number;
   passenger_firstname: string;
