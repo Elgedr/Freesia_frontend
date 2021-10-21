@@ -12,7 +12,7 @@ import {FlightService} from "../../services/flight.service";
   styleUrls: ['./ship-details.component.css']
 })
 export class ShipDetailsComponent implements OnInit {
-  private shipId !: number;
+  public shipId !: number;
   flights: Flight[] = [];
   ship !: Ship;
   ships: Ship[] = [];
@@ -43,13 +43,17 @@ export class ShipDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.shipService.getAllShips().subscribe((res: Ship[])=>{
       this.ships = res;
+      this.getShip()
+
     })
+
     this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
+
     })
+
     // достала ид корабля из урл
     this.shipId = this.route.snapshot.params['id']
-    this.getShip()
     this.getFightsForShip()
   }
 
