@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FLIGHTS} from "../../mock-elements/mock-flights";
 import {Flight} from "../../models/flight";
-import {TestService} from "../../services/test.service";
 import {FlightService} from "../../services/flight.service";
 
 @Component({
@@ -13,19 +11,19 @@ import {FlightService} from "../../services/flight.service";
 export class FlightsComponent implements OnInit {
   flights: Flight[] = [];
   selecetdFlightdest: string = "";
-  filteredFlightsList: Flight[] = FLIGHTS
+  filteredFlightsList: Flight[] = []
 
   constructor(private flightService: FlightService) {
 
   }
 
   public filterFlights() {
-    // this.filteredFlightsList = []
-    // for (let flight = 0; flight < this.flights.length; flight++) {
-    //   if (this.flights[flight].destination_place == this.selecetdFlightdest) {
-    //     this.filteredFlightsList.push(this.flights[flight])
-    //   }
-    // }
+    this.filteredFlightsList = []
+    for (let flight = 0; flight < this.flights.length; flight++) {
+      if (this.flights[flight].destinationPlace == this.selecetdFlightdest) {
+        this.filteredFlightsList.push(this.flights[flight])
+      }
+    }
     // this.flightService.testRequest().subscribe((res: Flight) => {
     //   console.log(res)
     // })
@@ -36,7 +34,9 @@ export class FlightsComponent implements OnInit {
   ngOnInit(): void {
     this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
+      this.filteredFlightsList = res;
     })
+    console.log(this.flights)
   }
 
 }

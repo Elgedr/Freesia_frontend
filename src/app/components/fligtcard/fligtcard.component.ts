@@ -19,6 +19,7 @@ export class FligtcardComponent {
   ngOnInit(): void{
     this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
+      console.log(this.flights)
     })
   }
 
