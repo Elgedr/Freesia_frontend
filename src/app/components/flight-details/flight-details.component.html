@@ -20,8 +20,8 @@
 
     <li>
       <p>You will fly by ship
-        <mark style="background: #77A0D0">{{flightsShip.name}}</mark>
-        nr: {{particularFlight.shipId}}</p>
+        <mark style="background: #77A0D0">{{particularFlight.ship.name}}</mark>
+        nr: {{particularFlight.ship.id}}</p>
     </li>
 
     <li>
@@ -31,7 +31,7 @@
 
 
   <div class="card-body">
-    <button style="color: #336699; font-family: Arial,serif;"  [routerLink]="['/flights', particularFlight.id, particularFlight.shipId, 'booking']" mat-raised-button> Book a seat to this
+    <button style="color: #336699; font-family: Arial,serif;"  [routerLink]="['/flights', particularFlight.id, particularFlight.ship.id, 'booking']" mat-raised-button> Book a seat to this
       flight
     </button>
   </div>
