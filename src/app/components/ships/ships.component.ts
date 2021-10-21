@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Ship} from "../../models/ship";
 import {ShipService} from "../../services/ship.service";
 
@@ -12,21 +12,23 @@ export class ShipsComponent implements OnInit {
   ships: Ship[] = [];
   numOfShipsInRow: number = 3;
   shipRows: number[] = [];
-  constructor(private  shipService: ShipService) { }
+
+  constructor(private shipService: ShipService) {
+  }
 
   ngOnInit(): void {
 
-    this.shipService.getAllShips().subscribe((res: Ship[])=>{
+    this.shipService.getAllShips().subscribe((res: Ship[]) => {
       this.ships = res;
       console.log(res)
       console.log(this.ships)
     })
     console.log(this.ships)
-    // const numOfRows = this.ships.length / this.numOfShipsInRow;
-    // for (let i = 0; i < numOfRows; i++) {
-    //   this.shipRows.push(i);
-    // }
+    const numOfRows = this.ships.length / this.numOfShipsInRow;
+    console.log(this.ships.length)
+    for (let i = 0; i < numOfRows; i++) {
+      this.shipRows.push(i);
+    }
+
   }
-
-
 }
