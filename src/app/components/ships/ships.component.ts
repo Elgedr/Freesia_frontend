@@ -20,15 +20,15 @@ export class ShipsComponent implements OnInit {
 
     this.shipService.getAllShips().subscribe((res: Ship[]) => {
       this.ships = res;
+      console.log(this.ships)
+      const numOfRows = this.ships.length / this.numOfShipsInRow;
+      console.log(this.ships.length)
+      for (let i = 0; i < numOfRows; i++) {
+        this.shipRows.push(i);
+      }
       console.log(res)
       console.log(this.ships)
     })
-    console.log(this.ships)
-    const numOfRows = this.ships.length / this.numOfShipsInRow;
-    console.log(this.ships.length)
-    for (let i = 0; i < numOfRows; i++) {
-      this.shipRows.push(i);
-    }
 
   }
 }
