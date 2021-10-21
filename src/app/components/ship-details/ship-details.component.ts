@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {FLIGHTS} from "../../mock-elements/mock-flights";
 import {Ship} from "../../models/ship";
 import {ShipService} from "../../services/ship.service";
 import {Flight} from "../../models/flight";
@@ -23,7 +22,7 @@ export class ShipDetailsComponent implements OnInit {
 
   getFightsForShip() {
     for (let i = 0; i < this.flights.length; i++) {
-      if (this.flights[i].shipId == this.shipId) {
+      if (this.flights[i].ship.id == this.shipId) {
         this.flights.push(this.flights[i])
       }
 

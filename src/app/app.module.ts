@@ -37,7 +37,6 @@ import {NzGridModule} from "ng-zorro-antd/grid";
 import {NzTypographyModule} from "ng-zorro-antd/typography";
 import {NzSpaceModule} from "ng-zorro-antd/space";
 import {NzCardModule} from "ng-zorro-antd/card";
-import {TestService} from "./services/test.service";
 import {FlightService} from "./services/flight.service";
 import {ShipService} from "./services/ship.service";
 
