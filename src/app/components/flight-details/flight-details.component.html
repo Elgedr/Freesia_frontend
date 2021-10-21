@@ -1,39 +1,41 @@
 <body>
-<div class="card">
+<div class="space">
+  <div class="card">
 
-<!--  <img class="card-img-top" src="assets\img\file-20210707-25-2zom23.jpg" alt="Card image cap">-->
-  <div class="card-body">
-    <h2 class="card-title" style="color: #336699 ">Flight to
-      the {{particularFlight.destinationPlace}} !</h2>
+    <div class="card-body">
+      <h2 class="card-title" style="color: #336699 ">Flight to {{particularFlight.destinationPlace}}!</h2>
 
-  </div>
-
-
-  <ul type="circle">
-    <li>
-      <p>You will be on {{particularFlight.destinationPlace}} at {{particularFlight.arrivalTime}}</p>
-    </li>
-
-    <li>
-      <p>This is the flight nr: {{particularFlight.id}} </p>
-    </li>
-
-    <li>
-      <p>You will fly by ship
-        <mark style="background: #77A0D0">{{particularFlight.ship.name}}</mark>
-        nr: {{particularFlight.ship.id}}</p>
-    </li>
-
-    <li>
-      <p>The flight will start at {{particularFlight.departureTime}}</p>
-    </li>
-  </ul>
+    </div>
 
 
-  <div class="card-body">
-    <button style="color: #336699; font-family: Arial,serif;"  [routerLink]="['/flights', particularFlight.id, particularFlight.ship.id, 'booking']" mat-raised-button> Book a seat to this
-      flight
-    </button>
+    <ul type="circle">
+      <li>
+        <p>You will be on {{particularFlight.destinationPlace}} at {{particularFlight.arrivalTime}}</p>
+      </li>
+
+      <li>
+        <p>This is the flight nr: {{particularFlight.id}} </p>
+      </li>
+
+      <li>
+        <p>You will fly by ship
+          <mark >{{particularFlight.ship.name}}</mark>
+          nr: {{particularFlight.ship.id}}</p>
+      </li>
+
+      <li>
+        <p>The flight will start at {{particularFlight.departureTime}}</p>
+      </li>
+    </ul>
+
+
+    <div class="card-body">
+      <button style="color: #336699; font-family: Arial,serif;"
+              [routerLink]="['/flights', particularFlight.id, particularFlight.ship.id, 'booking']" mat-raised-button>
+        Book a seat to this
+        flight
+      </button>
+    </div>
   </div>
 </div>
 </body>
