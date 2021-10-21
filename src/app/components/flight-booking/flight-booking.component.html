@@ -2,7 +2,7 @@
   <nz-content class="outer-content">
 
     <nz-layout class="inner-layout">
-      <nz-sider nzWidth="400px" nzTheme="light">
+      <nz-sider nzWidth="200px" nzTheme="light">
         <div nz-row [nzGutter]="[8,8]" style="margin-top: 20px;" nzAlign="middle" nzJustify="center">
           <nz-col *ngFor="let seat of seats">
             <ng-container [ngSwitch]="true">
@@ -32,6 +32,7 @@
       <nz-content class="inner-content">
         <span nz-typography nzType="secondary">Please click on the seat you would like to reserve.
           To cancel your choice, please click on the same seat again.</span>
+        <br>
         <nz-space nzDirection="vertical">
           <nz-card *nzSpaceItem nzTitle="Seats in your cart:" style="width: 300px">
             <div *ngFor="let item of chosen">
