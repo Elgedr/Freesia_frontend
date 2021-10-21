@@ -36,6 +36,7 @@ export class FlightsComponent implements OnInit {
       this.flights = res;
       this.filteredFlightsList = res;
     })
+    console.log(this.flights)
   }
 
 }
