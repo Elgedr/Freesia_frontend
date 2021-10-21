@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SHIPS} from "../mock-elements/mock-ships";
+import {SHIPS} from "../../mock-elements/mock-ships";
 
 @Component({
   selector: 'app-ships',
