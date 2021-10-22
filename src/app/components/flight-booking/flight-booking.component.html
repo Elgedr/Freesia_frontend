@@ -2,11 +2,11 @@
   <nz-content class="outer-content">
 
     <nz-layout class="inner-layout">
-      <nz-sider nzWidth="400px" nzTheme="light">
+      <nz-sider nzWidth="200px" nzTheme="light">
         <div nz-row [nzGutter]="[8,8]" style="margin-top: 20px;" nzAlign="middle" nzJustify="center">
           <nz-col *ngFor="let seat of seats">
             <ng-container [ngSwitch]="true">
-              <div *ngSwitchCase="seat.booked">
+              <div *ngSwitchCase="isBeingReserved&&!seat.reserved">
                 <button class="button" nz-button nzType="dashed" nzShape="circle" disabled
                         (click)="addOrRemoveSeatFromCart(seat)">
                   {{seat.id}}
@@ -32,17 +32,25 @@
       <nz-content class="inner-content">
         <span nz-typography nzType="secondary">Please click on the seat you would like to reserve.
           To cancel your choice, please click on the same seat again.</span>
+        <br>
         <nz-space nzDirection="vertical">
-          <nz-card *nzSpaceItem nzTitle="Seats in your cart:" style="width: 300px">
+          <nz-card *nzSpaceItem nzTitle="The seat in your cart:" style="width: 300px">
             <div *ngFor="let item of chosen">
               <b>{{item.id}}</b>
             </div>
           </nz-card>
         </nz-space>
         <br>
-        <button style="color: white; font-family: Arial,serif;" [routerLink]="['/flight',flightId,'form']" type="button"
-                class="btn button btn-dark">Confirm booking
+        <button *ngIf="chosen.length != 0; else elseBlock"
+          style="color: white; font-family: Arial,serif;"
+                [routerLink]="['/flight',flightId,'form']" [state]="chosen"
+                type="button" class="btn button btn-dark">Confirm booking
         </button>
+        <ng-template #elseBlock>
+          <button disabled style="color: white; font-family: Arial,serif;"
+                  type="button" class="btn button btn-dark">Confirm booking
+          </button>
+        </ng-template>
       </nz-content>
     </nz-layout>
   </nz-content>
