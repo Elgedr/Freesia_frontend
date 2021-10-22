@@ -9,7 +9,7 @@
 
 ### "But how do I access your website?"
 The project is still in development, but don't worry! it's only going to take... well, let's see. From a couple of minutes to an hour to get it up and running on your own computer. Here:
-1. First, please pull our [server/backend repository](https://gitlab.cs.ttu.ee/judjom/iti0302-2021) as well as this frontend repository.
+1. First, please clone our [server/backend repository](https://gitlab.cs.ttu.ee/judjom/iti0302-2021) as well as this frontend repository.
 2. Our SQL database is resided in the Docker image included with the backend repository. Please build the Docker image as following:
     - `docker build`
     - `docker-compose up -d` (twice)
