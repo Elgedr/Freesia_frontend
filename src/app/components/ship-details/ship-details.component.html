@@ -1,17 +1,26 @@
-<div class="card" style="max-width: 18rem;" *ngFor="let f of flights">
-  <div class="card-header">{{ship.name}}</div>
-  <div class="card-body text-primary">
-    <p class="card-text" > </p>
-    <ul>
-      <div>
-        {{f.departurePlace}} → {{f.destinationPlace}}
-      </div>
-      <div>
-        Departure time {{f.departureTime}}
-      </div>
-      <div>
-        Arrival time {{f.arrivalTime}}
-      </div>
-    </ul>
+<div  *ngFor="let f of flights">
+
+  <div class="card" style="max-width: 18rem;" *ngIf="f.ship.id === ship.id">
+
+
+    <div class="card-header">{{ship.name}}</div>
+    <div class="card-body text-primary">
+      <p class="card-text"></p>
+      <ul style="color: black">
+        <div>
+          {{f.departurePlace}} → {{f.destinationPlace}}
+        </div>
+        <div>
+          Departure time {{f.departureTime}}
+        </div>
+        <div>
+          Arrival time {{f.arrivalTime}}
+        </div>
+      </ul>
+
+    </div>
+
   </div>
+
+
 </div>
