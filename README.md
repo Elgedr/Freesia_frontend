@@ -1,4 +1,4 @@
-# FREESIA
+# FREESIA FRONTEND
 
 **Freesia** is a web application for booking intergalactic flight tickets. As humanity goes farther and farther into space, intergalactic travel becomes more and more accessible for the common folk. We at Freesia believe in going at the same pace as the world around us, which means providing our clients with an easy-to-use website for booking the flight to any planet of our system.
 
