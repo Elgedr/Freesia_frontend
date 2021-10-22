@@ -14,8 +14,8 @@ export class FlightBookingComponent implements OnInit {
   flights: Flight[] = [];
   flightId: any = null;
   numberOfSeats = 60;
-  seats: Seat[] = []
-  chosen: Seat[] = []
+  seats: Seat[] = [];
+  chosen: Seat[] = [];
   isBeingReserved: boolean = false;
 
   constructor(private route: ActivatedRoute, private flightService: FlightService) {
