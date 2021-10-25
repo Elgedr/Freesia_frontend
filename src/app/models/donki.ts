@@ -1,17 +1,17 @@
-export interface allKpIndex {
+export interface AllKpIndex {
   observedTime: string;
   kpIndex: number;
   source: string
 }
 
-export interface linkedEvents {
+export interface LinkedEvents {
   activityID: string
 }
 
 export interface Donki {
     gstID: string;
     startTime: string;
-    allKpIndex: allKpIndex[];
-    linkedEvents: linkedEvents[];
+    allKpIndex: AllKpIndex[];
+    linkedEvents: LinkedEvents[];
     link: string;
 }
