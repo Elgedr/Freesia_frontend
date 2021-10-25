@@ -1,4 +1,3 @@
-
 <div class="space">
   <div class="card">
 
@@ -19,7 +18,7 @@
 
       <li>
         <p>You will fly by ship
-          <mark  style="background-color :lightskyblue;">{{particularFlight.ship.name}}</mark>
+          <mark style="background-color :lightskyblue;">{{particularFlight.ship.name}}</mark>
           nr: {{particularFlight.ship.id}}</p>
       </li>
 
@@ -30,7 +29,7 @@
 
 
     <div class="card-body">
-      <button style="color: #336699; font-family: Arial,serif;"
+      <button style="color: #336699;"
               [routerLink]="['/flights', particularFlight.id, particularFlight.ship.id, 'booking']" mat-raised-button>
         Book a seat to this
         flight

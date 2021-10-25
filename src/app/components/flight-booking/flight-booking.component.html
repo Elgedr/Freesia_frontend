@@ -42,12 +42,12 @@
         </nz-space>
         <br>
         <button *ngIf="chosen.length != 0; else elseBlock"
-          style="color: white; font-family: Arial,serif;"
+                style="color: white;"
                 [routerLink]="['/flight',flightId,'form']" [state]="chosen"
                 type="button" class="btn button btn-dark">Confirm booking
         </button>
         <ng-template #elseBlock>
-          <button disabled style="color: white; font-family: Arial,serif;"
+          <button disabled style="color: white;"
                   type="button" class="btn button btn-dark">Confirm booking
           </button>
         </ng-template>

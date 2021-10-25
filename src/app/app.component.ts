@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,11 @@ import { Component } from '@angular/core';
   preserveWhitespaces: true
 })
 export class AppComponent {
+  title = "Freesia";
 
-  title = 'Freesia';
-  myImage = 'assets/images/space.jpg'
+  public constructor(private titleService: Title) {
+    this.titleService.setTitle("Freesia");
+  }
 }
 
 

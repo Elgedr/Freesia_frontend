@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -86,7 +86,7 @@ import {ShipService} from "./services/ship.service";
     NzSpaceModule,
     NzCardModule
   ],
-  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title],
   bootstrap: [AppComponent]
 })
 

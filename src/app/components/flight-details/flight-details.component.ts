@@ -22,13 +22,6 @@ export class FlightDetailsComponent implements OnInit {
 
   findFlightById(flightsList: Flight[]) {
     this.particularFlight = flightsList.filter(f => f.id == this.flightId)[0];
-    // for (let flight = 0; flight < FLIGHTS.length; flight++) {
-    //   if (FLIGHTS[flight].id == this.flightId) {
-    //     this.particularFlight = FLIGHTS[flight]
-    //     break;
-    //   }
-    // }
-    console.log(this.particularFlight)
   }
 
 

@@ -24,15 +24,12 @@ export class FlightsComponent implements OnInit {
         this.filteredFlightsList.push(this.flights[flight])
       }
     }
-    // this.flightService.testRequest().subscribe((res: Flight) => {
-    //   console.log(res)
-    // })
 
   }
 
 
   ngOnInit(): void {
-    this.flightService.getAllFlights().subscribe((res: Flight[])=>{
+    this.flightService.getAllFlights().subscribe((res: Flight[]) => {
       this.flights = res;
       this.filteredFlightsList = res;
     })
