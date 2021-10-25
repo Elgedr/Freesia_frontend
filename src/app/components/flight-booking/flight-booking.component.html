@@ -43,7 +43,7 @@
         <br>
         <button *ngIf="chosen.length != 0; else elseBlock"
                 style="color: white;"
-                [routerLink]="['/flight',flightId,'form']" [state]="chosen"
+                [routerLink]="['/flights',flightId,'form']" [state]="chosen"
                 type="button" class="btn button btn-dark">Confirm booking
         </button>
         <ng-template #elseBlock>

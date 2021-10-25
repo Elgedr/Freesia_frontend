@@ -13,10 +13,10 @@ const routes: Routes = [
   {path: ' ', component: AppComponent},
   {path: 'flights', component: FlightsComponent},
   {path: 'ships', component: ShipsComponent},
-  {path: 'flights/:id/:sid/details', component: FlightDetailsComponent},
-  {path: 'flights/:id/:sid/booking', component: FlightBookingComponent},
+  {path: 'flights/:id/details', component: FlightDetailsComponent},
+  {path: 'flights/:id/booking', component: FlightBookingComponent},
   {path: 'ships/:id/flights', component: ShipDetailsComponent},
-  {path: 'flight/:fid/form', component: UsersInfoFormComponent},
+  {path: 'flights/:fid/form', component: UsersInfoFormComponent},
   {path: 'bookingSucceed', component: BookingSucceedComponent}
 ];
 
