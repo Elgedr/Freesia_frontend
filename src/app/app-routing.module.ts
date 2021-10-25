@@ -7,7 +7,7 @@ import {FlightDetailsComponent} from "./components/flight-details/flight-details
 import {FlightBookingComponent} from "./components/flight-booking/flight-booking.component";
 import {ShipDetailsComponent} from "./components/ship-details/ship-details.component";
 import {UsersInfoFormComponent} from "./components/users-info-form/users-info-form.component";
-import {BookignSucceedComponent} from "./components/bookign-succeed/bookign-succeed.component";
+import {BookingSucceedComponent} from "./components/booking-succeed/booking-succeed.component";
 
 const routes: Routes = [
   {path: ' ', component: AppComponent},
@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'flights/:id/:sid/booking', component: FlightBookingComponent},
   {path: 'ships/:id/flights', component: ShipDetailsComponent},
   {path: 'flight/:fid/form', component: UsersInfoFormComponent},
-  {path: 'bookingSucceed', component: BookignSucceedComponent}
+  {path: 'bookingSucceed', component: BookingSucceedComponent}
 ];
 
 

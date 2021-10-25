@@ -28,7 +28,7 @@ import { ShipDetailsComponent } from './components/ship-details/ship-details.com
 import { SpaceWeatherWidgetComponent } from './components/space-weather-widget/space-weather-widget.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { UsersInfoFormComponent } from './components/users-info-form/users-info-form.component';
-import { BookignSucceedComponent } from './components/bookign-succeed/bookign-succeed.component';
+import { BookingSucceedComponent } from './components/booking-succeed/booking-succeed.component';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import {NzIconModule} from "ng-zorro-antd/icon";
@@ -56,7 +56,7 @@ import {ShipService} from "./services/ship.service";
     SpaceWeatherWidgetComponent,
     ShipDetailsComponent,
     UsersInfoFormComponent,
-    BookignSucceedComponent
+    BookingSucceedComponent
 
   ],
   imports: [
