@@ -15,21 +15,15 @@ export class FlightDetailsComponent implements OnInit {
   private flightId: any = null;
   particularFlight !: Flight;
   ships: Ship[] = [];
-  flights: Flight[] = [];
 
   constructor(private route: ActivatedRoute, private shipService: ShipService, private flightService: FlightService) {
-  }
-
-  findFlightById(flightsList: Flight[]) {
-    this.particularFlight = flightsList.filter(f => f.id == this.flightId)[0];
   }
 
 
   ngOnInit(): void {
     this.flightId = this.route.snapshot.params['id'];
-    this.flightService.getAllFlights().subscribe((res: Flight[]) => {
-      this.flights = res;
-      this.findFlightById(res)
+    this.flightService.getFlightById(this.flightId).subscribe((res) => {
+      this.particularFlight = res;
     })
   }
 

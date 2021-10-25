@@ -29,7 +29,7 @@ export class FlightsComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.flightService.getAllFlights().subscribe((res: Flight[]) => {
+    this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
       this.filteredFlightsList = res;
     })
