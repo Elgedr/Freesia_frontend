@@ -20,6 +20,10 @@ build freesia:
 
 deploy freesia:
   stage: deploy
+  only:
+    refs:
+      - main
+
   tags:
     - freesia
   script:
