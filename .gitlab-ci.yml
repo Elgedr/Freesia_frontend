@@ -1,0 +1,28 @@
+
+stages:
+  - build
+  - deploy
+
+build freesia:
+  stage: build
+  image: node:12-alpine
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+  tags:
+    - freesia
+  script:
+    - npm install
+    - npm run build
+
+deploy freesia:
+  stage: deploy
+  tags:
+    - freesia
+  script:
+    - mkdir -p ~/front-deployment
+    - rm -rf ~/front-deployment/*
+    - cp -r dist/. ~/front-deployment
