@@ -27,6 +27,7 @@ deploy freesia:
   tags:
     - freesia
   script:
+    - export NODE_OPTIONS=--max_old_space_size=4096
     - mkdir -p ~/front-deployment
     - rm -rf ~/front-deployment/*
     - cp -r dist/. ~/front-deployment
