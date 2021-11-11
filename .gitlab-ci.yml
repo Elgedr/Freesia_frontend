@@ -23,7 +23,6 @@ deploy freesia:
   only:
     refs:
       - main
-
   tags:
     - freesia
   script:
