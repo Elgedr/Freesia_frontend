@@ -16,7 +16,6 @@ build freesia:
   script:
     - npm install
     - npm run build
-
 deploy freesia:
   stage: deploy
   only:
