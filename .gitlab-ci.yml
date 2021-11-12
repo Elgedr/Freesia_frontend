@@ -14,6 +14,7 @@ build freesia:
   tags:
     - freesia
   script:
+    - node —max_old_space_size=4096
     - npm install
     - npm run build
 
