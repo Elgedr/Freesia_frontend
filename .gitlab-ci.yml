@@ -14,8 +14,9 @@ build freesia:
   tags:
     - freesia
   script:
-    - yarn install
+    - npm install
     - node —max_old_space_size=4096
+    - npm run build
 
 deploy freesia:
   stage: deploy
