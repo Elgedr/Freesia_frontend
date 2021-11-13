@@ -24,7 +24,7 @@ deploy freesia:
   tags:
     - freesia
   script:
-    - mkdir -p ~/front-deployment
+    - mkdir ~/front-deployment
     - rm -rf ~/front-deployment/*
     - cp -r dist/. ~/front-deployment
 
