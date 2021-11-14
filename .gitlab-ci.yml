@@ -10,7 +10,7 @@ build freesia:
       - node_modules
   artifacts:
     paths:
-      - dist
+      - ./static
   tags:
     - freesia
   script:
