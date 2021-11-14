@@ -26,5 +26,5 @@ deploy freesia:
   script:
     - mkdir -p ~/front-deployment
     - rm -rf ~/front-deployment/*
-    - cp -r dist/. ~/front-deployment
+    - cp -r /home/gitlab-runner/builds/6UAbaXnS/0/elgedr$
 
