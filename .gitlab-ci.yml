@@ -10,7 +10,7 @@ build freesia:
       - node_modules
   artifacts:
     paths:
-      - ./static
+      - dist
   tags:
     - freesia
   script:
@@ -26,5 +26,5 @@ deploy freesia:
   script:
     - mkdir -p ~/front-deployment
     - rm -rf ~/front-deployment/*
-    - cp -r /home/gitlab-runner/builds/6UAbaXnS/0/elgedr$
+    - cp -r dist/. ~/front-deployment
 
