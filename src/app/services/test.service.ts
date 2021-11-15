@@ -9,6 +9,6 @@ export class TestService {
   }
 
   public testRequest(): Observable<any> {
-    return this.http.get("http://localhost:8081/freesia");
+    return this.http.get("http://localhost:8081/api/freesia");
   }
 }
