@@ -69,10 +69,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Freesia:build:production"
+              "browserTarget": "Freesia:build:production",
+              "proxyConfig": "./proxy.conf.json"
             },
             "development": {
-              "browserTarget": "Freesia:build:development"
+              "browserTarget": "Freesia:build:development",
+              "proxyConfig": "./proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -104,5 +106,7 @@
       }
     }
   },
+
+
   "defaultProject": "Freesia"
 }
