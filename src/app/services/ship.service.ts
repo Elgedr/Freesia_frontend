@@ -9,6 +9,6 @@ export class ShipService {
   }
 
   public getAllShips(): Observable<any> {
-    return this.http.get("http://3.22.249.58:8081/api/ships");
+    return this.http.get("http://localhost:8081/api/ships");
   }
 }
