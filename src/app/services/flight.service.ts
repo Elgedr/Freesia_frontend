@@ -9,11 +9,11 @@ export class FlightService {
   }
 
   public getAllFlights(): Observable<any> {
-    console.log(this.http.get("http://localhost:8081/api/api/flights"));
-    return this.http.get("http://localhost:8081/api/api/flights");
+    console.log(this.http.get("/api/flights"));
+    return this.http.get("/api/flights");
   }
 
   public getFlightById(id: string): Observable<any> {
-    return this.http.get("http://localhost:8081/api/api/flights/" + id)
+    return this.http.get("/api/flights/" + id)
   }
 }
