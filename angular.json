@@ -67,14 +67,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
-              "browserTarget": "Freesia:build:production",
-              "proxyConfig": "./proxy.conf.json"
+              "browserTarget": "Freesia:build:production"
             },
             "development": {
-              "browserTarget": "Freesia:build:development",
-              "proxyConfig": "./proxy.conf.json"
+              "browserTarget": "Freesia:build:development"
             }
           },
           "defaultConfiguration": "development"
