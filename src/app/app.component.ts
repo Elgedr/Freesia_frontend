@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   preserveWhitespaces: true
 })
 export class AppComponent {
-  title = "Freesiaaa";
+  title = "Freesia";
 
   public constructor(private titleService: Title) {
     this.titleService.setTitle("Freesia");
