@@ -8,6 +8,8 @@ import {FlightBookingComponent} from "./components/flight-booking/flight-booking
 import {ShipDetailsComponent} from "./components/ship-details/ship-details.component";
 import {UsersInfoFormComponent} from "./components/users-info-form/users-info-form.component";
 import {BookingSucceedComponent} from "./components/booking-succeed/booking-succeed.component";
+import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
 
 const routes: Routes = [
   {path: ' ', component: AppComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'flights/:id/:sid/booking', component: FlightBookingComponent},
   {path: 'ships/:id/flights', component: ShipDetailsComponent},
   {path: 'flight/:fid/form', component: UsersInfoFormComponent},
-  {path: 'bookingSucceed', component: BookingSucceedComponent}
+  {path: 'bookingSucceed', component: BookingSucceedComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 

@@ -39,6 +39,9 @@ import {NzSpaceModule} from "ng-zorro-antd/space";
 import {NzCardModule} from "ng-zorro-antd/card";
 import {FlightService} from "./services/flight.service";
 import {ShipService} from "./services/ship.service";
+import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
+import { ProfileComponent } from './components/profile/profile.component';
 
 // @ts-ignore
 @NgModule({
@@ -56,7 +59,13 @@ import {ShipService} from "./services/ship.service";
     SpaceWeatherWidgetComponent,
     ShipDetailsComponent,
     UsersInfoFormComponent,
-    BookingSucceedComponent
+    BookingSucceedComponent,
+    LoginComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterComponent,
+    ProfileComponent,
+    TabComponent
 
   ],
   imports: [
