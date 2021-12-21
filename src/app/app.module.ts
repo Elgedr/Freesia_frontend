@@ -42,6 +42,9 @@ import {ShipService} from "./services/ship.service";
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './components/home/home.component';
+import { AuthComponent } from './components/auth/auth.component';
+import {TabService} from "./services/tab.service";
 
 // @ts-ignore
 @NgModule({
@@ -65,7 +68,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     RegisterComponent,
     RegisterComponent,
     ProfileComponent,
-    TabComponent
+    HomeComponent,
+    AuthComponent
 
   ],
   imports: [
@@ -95,7 +99,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     NzSpaceModule,
     NzCardModule
   ],
-  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title, TabService],
   bootstrap: [AppComponent]
 })
 

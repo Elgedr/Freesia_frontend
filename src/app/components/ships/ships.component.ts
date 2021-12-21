@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Ship} from "../../models/ship";
 import {ShipService} from "../../services/ship.service";
+import {TabService} from "../../services/tab.service";
 
 @Component({
   selector: 'app-ships',
@@ -13,10 +14,11 @@ export class ShipsComponent implements OnInit {
   numOfShipsInRow: number = 3;
   shipRows: number[] = [];
 
-  constructor(private shipService: ShipService) {
+  constructor(private shipService: ShipService, public tab: TabService) {
   }
 
   ngOnInit(): void {
+    this.tab.show();
 
     this.shipService.getAllShips().subscribe((res: Ship[]) => {
       this.ships = res;

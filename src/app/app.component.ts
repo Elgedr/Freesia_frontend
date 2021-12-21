@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import {TokenStorageService} from "./services/token-storage.service";
+import {TabService} from "./services/tab.service";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ export class AppComponent implements OnInit {
   isLoggedIn = false;
   username?: string;
 
-  public constructor(private titleService: Title, private tokenStorageService: TokenStorageService) {
+  public constructor(private titleService: Title, private tokenStorageService: TokenStorageService,
+                     public tab: TabService) {
     this.titleService.setTitle(this.title);
   }
 
@@ -24,14 +26,8 @@ export class AppComponent implements OnInit {
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
-
       this.username = user.username;
     }
-  }
-
-  logout(): void {
-    this.tokenStorageService.signOut();
-    window.location.reload();
   }
 }
 

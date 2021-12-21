@@ -10,9 +10,13 @@ import {UsersInfoFormComponent} from "./components/users-info-form/users-info-fo
 import {BookingSucceedComponent} from "./components/booking-succeed/booking-succeed.component";
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {HomeComponent} from "./components/home/home.component";
+import {AuthComponent} from "./components/auth/auth.component";
 
 const routes: Routes = [
-  {path: ' ', component: AppComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'auth'},
+  {path: 'auth', component: AuthComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'flights', component: FlightsComponent},
   {path: 'ships', component: ShipsComponent},
   {path: 'flights/:id/:sid/details', component: FlightDetailsComponent},

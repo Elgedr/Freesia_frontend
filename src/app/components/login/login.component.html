@@ -1,77 +1,119 @@
-<div class="main-div">
-  <div class="col-md-12">
-    <div class="card card-container">
-      <img
-        id="profile-img"
-        src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-        class="profile-img-card"
-        alt=""/>
-      <form
-        *ngIf="!isLoggedIn"
-        name="form"
-        (ngSubmit)="f.form.valid && onSubmit()"
-        #f="ngForm"
-        novalidate
-      >
-        <div class="form-group">
-          <label [htmlFor]="username">Username</label>
-          <input
-            type="text"
-            class="form-control"
-            name="username"
-            [(ngModel)]="form.username"
-            required
-            #username="ngModel"
-          />
-          <div
-            class="alert alert-danger"
-            role="alert"
-            *ngIf="username.errors && f.submitted"
-          >
-            Username is required!
-          </div>
-        </div>
-        <div class="form-group">
-          <label [htmlFor]="password">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            name="password"
-            [(ngModel)]="form.password"
-            required
-            minlength="6"
-            #password="ngModel"
-          />
-          <div
-            class="alert alert-danger"
-            role="alert"
-            *ngIf="password.errors && f.submitted"
-          >
-            <div *ngIf="password.errors.required">Password is required</div>
-            <div *ngIf="password.errors.minlength">
-              Password must be at least 6 characters
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <button class="btn btn-primary btn-block">
-            Login
-          </button>
-        </div>
-        <div class="form-group">
-          <div
-            class="alert alert-danger"
-            role="alert"
-            *ngIf="f.submitted && isLoginFailed"
-          >
-            Login failed: {{ errorMessage }}
-          </div>
-        </div>
-      </form>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-      <div class="alert alert-success" *ngIf="isLoggedIn">
-        Logged in as {{ roles }}.
+
+<body class="login-page sidebar-collapse">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent">
+  <div class="container">
+    <div class="collapse navbar-collapse justify-content-end" id="navigation"
+         data-nav-image="../assets/img/blurred-image-1.jpg">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Visit our GitLab page" data-placement="bottom"
+             href="https://gitlab.cs.ttu.ee/elgedr/iti0302-2021-front" target="_blank">
+            <i class="fab fa-gitlab"></i>
+            <p class="d-lg-none d-xl-none">GitLab</p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+<div class="page-header clear-filter" filter-color="orange">
+  <div class="page-header-image"
+       style="background-image:url('https://images.unsplash.com/photo-1438783122414-75b2c084bd44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80 2378w')"></div>
+  <div class="content">
+    <div class="container">
+      <div class="col-md-4 ml-auto mr-auto">
+        <div class="card card-login card-plain">
+          <form class="form" method="" action="">
+
+            <div class="card-body">
+              <img src="assets\img\freesia_icon.png" alt="Freesia logo icon">
+              <form
+                *ngIf="!isLoggedIn"
+                name="form"
+                (ngSubmit)="f.form.valid && onSubmit()"
+                #f="ngForm"
+                novalidate
+              >
+                <div class="form-group">
+                  <label [htmlFor]="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    [(ngModel)]="form.username"
+                    required
+                    #username="ngModel"
+                  />
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="username.errors && f.submitted"
+                  >
+                    Username is required!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label [htmlFor]="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    [(ngModel)]="form.password"
+                    required
+                    minlength="6"
+                    #password="ngModel"
+                  />
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="password.errors && f.submitted"
+                  >
+                    <div *ngIf="password.errors.required">Password is required</div>
+                    <div *ngIf="password.errors.minlength">
+                      Password must be at least 6 characters
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block">
+                    Login
+                  </button>
+                </div>
+                <div class="form-group">
+                  <div
+                    class="alert alert-danger"
+                    role="alert"
+                    *ngIf="f.submitted && isLoginFailed"
+                  >
+                    Login failed: {{ errorMessage }}
+                  </div>
+                </div>
+              </form>
+
+              <div class="alert alert-success" *ngIf="isLoggedIn">
+                Logged in as {{ roles }}.
+              </div>
+
+            </div>
+
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="copyright" id="copyright">
+        <p>© Freesia team 2021</p>
+      </div>
+    </div>
+  </footer>
 </div>
+
+</body>

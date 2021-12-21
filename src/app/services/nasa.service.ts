@@ -31,7 +31,10 @@ export class NasaService {
 
   public getGeomagneticStorm(): Observable<Donki[]> {
     this.apiKey = environment.NASA_KEY;
-    const gstUrl = `https://api.nasa.gov/DONKI/GST?api_key=${this.apiKey}`;
+    const year = new Date().getFullYear() - 1;
+    const month = new Date().getMonth() + 1;
+    const day = new Date().getDate();
+    const gstUrl = `https://api.nasa.gov/DONKI/GST?startDate=${year}-${month}-${day}&api_key=${this.apiKey}`;
     return this.http.get<Donki[]>(gstUrl).pipe(
       take(1),
       catchError((err: any) => {
