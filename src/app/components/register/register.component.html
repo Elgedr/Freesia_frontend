@@ -111,6 +111,13 @@
               <div class="alert alert-success" *ngIf="isSuccessful">
                 Your registration is successful!
               </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block"
+                        *ngIf="isSuccessful"
+                        [routerLink]="['/home']">
+                  PROCEED TO SITE
+                </button>
+              </div>
             </div>
 
           </form>
