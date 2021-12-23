@@ -34,8 +34,18 @@
             <div class="card-body">
               <img src="assets\img\freesia_icon.png" alt="Freesia logo icon">
 
+              <div class="alert alert-success" *ngIf="isLoggedIn">
+                You're already logged in as <b>{{ username }}</b>!
+              </div>
+              <div class="form-group" *ngIf="isLoggedIn">
+                <button class="btn btn-primary btn-block"
+                        [routerLink]="['/home']">
+                  <b>PROCEED TO SITE</b>
+                </button>
+              </div>
+
               <form
-                *ngIf="!isSuccessful"
+                *ngIf="!isSuccessful && !isLoggedIn"
                 name="form"
                 (ngSubmit)="f.form.valid && onSubmit()"
                 #f="ngForm"
@@ -115,7 +125,7 @@
                 <button class="btn btn-primary btn-block"
                         *ngIf="isSuccessful"
                         [routerLink]="['/home']">
-                  PROCEED TO SITE
+                  <b>PROCEED TO SITE</b>
                 </button>
               </div>
             </div>

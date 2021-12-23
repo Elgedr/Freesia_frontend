@@ -47,6 +47,7 @@ import {TabService} from "./services/tab.service";
 import {HttpClientModule} from "@angular/common/http";
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { AdminboardComponent } from './components/adminboard/adminboard.component';
 
 // @ts-ignore
 @NgModule({
@@ -71,7 +72,8 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     RegisterComponent,
     ProfileComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent,
+    AdminboardComponent
 
   ],
   imports: [

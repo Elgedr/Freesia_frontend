@@ -1,6 +1,6 @@
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-<div class="container" *ngIf="currentUser; else loggedOut">
+<div class="container" *ngIf="isAdmin">
   <div class="page-header clear-filter" filter-color="orange">
     <div class="content">
       <div class="container">
@@ -10,20 +10,10 @@
 
               <div class="card-body">
                 <a class="btn btn-primary btn-round btn-lg btn-block disabled">
-                  <strong>Username:</strong>
-                  {{ currentUser.username }}
                 </a>
                 <a class="btn btn-primary btn-round btn-lg btn-block disabled">
-                    <strong>Email:</strong>
-                    {{ currentUser.email }}
                 </a>
                 <a class="btn btn-primary btn-round btn-lg btn-block disabled">
-                  <strong>Roles:</strong>
-                  <ul>
-                    <li *ngFor="let role of currentUser.roles">
-                      {{ role }}
-                    </li>
-                  </ul>
                 </a>
               </div>
             </form>
@@ -33,7 +23,3 @@
     </div>
   </div>
 </div>
-
-<ng-template #loggedOut>
-  Please login.
-</ng-template>

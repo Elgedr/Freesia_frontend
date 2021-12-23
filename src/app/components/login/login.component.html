@@ -97,9 +97,14 @@
               </form>
 
               <div class="alert alert-success" *ngIf="isLoggedIn">
-                Logged in as {{ roles }}.
+                You're already logged in as <b>{{ username }}</b>!
               </div>
-
+              <div class="form-group" *ngIf="isLoggedIn">
+                <button class="btn btn-primary btn-block"
+                        [routerLink]="['/home']">
+                  <b>PROCEED TO SITE</b>
+                </button>
+              </div>
             </div>
 
           </form>

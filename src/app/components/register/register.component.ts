@@ -16,12 +16,21 @@ export class RegisterComponent implements OnInit {
   };
   isSuccessful = false;
   isSignUpFailed = false;
+  isLoggedIn = false;
+  username = "";
   roles: string[] = [];
   errorMessage = '';
 
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
+    if (!!this.tokenStorage.getToken()) {
+      console.log("Already logged in with the token:");
+      console.log(this.tokenStorage.getToken());
+      this.isLoggedIn = true;
+      this.roles = this.tokenStorage.getUser().roles;
+      this.username = this.tokenStorage.getUser().username;
+    }
   }
 
   onSubmit(): void {

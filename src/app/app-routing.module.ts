@@ -12,6 +12,8 @@ import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {HomeComponent} from "./components/home/home.component";
 import {AuthComponent} from "./components/auth/auth.component";
+import {ProfileComponent} from "./components/profile/profile.component";
+import {AdminboardComponent} from "./components/adminboard/adminboard.component";
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'auth'},
@@ -25,7 +27,9 @@ const routes: Routes = [
   {path: 'flight/:fid/form', component: UsersInfoFormComponent},
   {path: 'bookingSucceed', component: BookingSucceedComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent}
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'adminboard', component: AdminboardComponent}
 ];
 
 
