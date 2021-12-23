@@ -1,5 +1,4 @@
-<div class="center"></div>
-<div class="center">
+<div class="center" *ngIf="isLoggedIn">
   <mat-form-field appearance="fill">
     <mat-label>Please pick a flight!</mat-label>
     <mat-select [(ngModel)]="selecetdFlightdest">
@@ -11,10 +10,19 @@
   <button class="button" (click)="filterFlights()"> Go</button>
 
   <br>
-  <!--  selected destination place is {{selecetdFlightdest}}-->
 </div>
 
 <app-space-weather-widget></app-space-weather-widget>
 <fligtcard-component *ngFor="let flight of filteredFlightsList" [flight]="flight"></fligtcard-component>
 
-
+<div class="container" *ngIf="!isLoggedIn">
+  <div class="card card-login card-plain">
+    <form class="form">
+      <div class="card-body">
+        <a class="btn btn-primary btn-round btn-lg btn-block disabled">
+          <strong>PLEASE LOG IN / SIGN UP TO SEE THE LIST OF ALL FLIGHTS!</strong>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

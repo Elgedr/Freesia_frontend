@@ -1,10 +1,20 @@
-<div class="container">
+<div class="container" *ngIf="isLoggedIn">
   <div class="row" *ngFor="let row of shipRows">
     <div class="col-md-3 mx-auto my-5"
          *ngFor="let ship of ships.slice(row * numOfShipsInRow, row * numOfShipsInRow + numOfShipsInRow)">
       <app-shipcard [ship]="ship"></app-shipcard>
     </div>
-
   </div>
 </div>
 
+<div class="container" *ngIf="!isLoggedIn">
+  <div class="card card-login card-plain">
+    <form class="form">
+      <div class="card-body">
+        <a class="btn btn-primary btn-round btn-lg btn-block disabled">
+          <strong>PLEASE LOG IN / SIGN UP TO SEE THE LIST OF ALL SHIPS!</strong>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
