@@ -23,7 +23,6 @@ import { ShipcardComponent } from './components/shipcard/shipcard.component';
 import { FlightBookingComponent } from './components/flight-booking/flight-booking.component';
 import {MatIconModule} from "@angular/material/icon";
 import {SafePipeModule} from "safe-pipe";
-import {HttpClientModule} from "@angular/common/http";
 import { ShipDetailsComponent } from './components/ship-details/ship-details.component';
 import { SpaceWeatherWidgetComponent } from './components/space-weather-widget/space-weather-widget.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
@@ -39,6 +38,16 @@ import {NzSpaceModule} from "ng-zorro-antd/space";
 import {NzCardModule} from "ng-zorro-antd/card";
 import {FlightService} from "./services/flight.service";
 import {ShipService} from "./services/ship.service";
+import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
+import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './components/home/home.component';
+import { AuthComponent } from './components/auth/auth.component';
+import {TabService} from "./services/tab.service";
+import {HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './helpers/auth.interceptor';
+import { AdminboardComponent } from './components/adminboard/adminboard.component';
 
 // @ts-ignore
 @NgModule({
@@ -56,7 +65,15 @@ import {ShipService} from "./services/ship.service";
     SpaceWeatherWidgetComponent,
     ShipDetailsComponent,
     UsersInfoFormComponent,
-    BookingSucceedComponent
+    BookingSucceedComponent,
+    LoginComponent,
+    LoginComponent,
+    RegisterComponent,
+    RegisterComponent,
+    ProfileComponent,
+    HomeComponent,
+    AuthComponent,
+    AdminboardComponent
 
   ],
   imports: [
@@ -86,7 +103,12 @@ import {ShipService} from "./services/ship.service";
     NzSpaceModule,
     NzCardModule
   ],
-  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title, TabService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 

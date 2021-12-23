@@ -14,8 +14,14 @@ export class SpaceWeatherWidgetComponent implements OnInit {
   constructor(private nasaApi: NasaService) {}
 
   ngOnInit(): void {
+    console.log("Before calling getGeoStorm");
+    console.log(this.nasaGeoMagnetic);
     this.nasaApi.getGeomagneticStorm().subscribe((response: Donki[]) => {
-      this.nasaGeoMagnetic = response[0];
+      console.log("Response:");
+      console.log(response);
+      this.nasaGeoMagnetic = response[response.length - 1];
+      console.log("After calling getGeoStorm");
+      console.log(this.nasaGeoMagnetic);
     });
   }
 }

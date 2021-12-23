@@ -1,0 +1,9 @@
+h1.title{
+  float: right;
+}
+
+.host {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

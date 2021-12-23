@@ -1,4 +1,4 @@
-<div class="center"><h2>FLIGHTS:</h2></div>
+<div class="center"></div>
 <div class="center">
   <mat-form-field appearance="fill">
     <mat-label>Please pick a flight!</mat-label>
@@ -14,10 +14,7 @@
   <!--  selected destination place is {{selecetdFlightdest}}-->
 </div>
 
-<app-carousel-component></app-carousel-component>
-
 <app-space-weather-widget></app-space-weather-widget>
-
 <fligtcard-component *ngFor="let flight of filteredFlightsList" [flight]="flight"></fligtcard-component>
 
 

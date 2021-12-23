@@ -8,7 +8,7 @@
   <mat-card-content>
     <div class="flex-row">
       <div class="temp">
-        <span class="big-text">{{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].kpIndex}}</span>
+        <span class="big-text" *ngIf="nasaGeoMagnetic">{{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].kpIndex}}</span>
         <span class="big-text">KP-INDEX</span>
         <span class="small">The Kp-index describes the disturbance of the Earth’s magnetic field caused by the solar wind.</span>
         <br>
@@ -27,9 +27,10 @@
       <div class="outlook">
         <img src="../../../assets/img/gst_icon.png" alt="Geomagnetic storm"/>
         <span>Geomagnetic storm start date:<br></span>
-        <span>{{nasaGeoMagnetic.startTime}}<br></span>
-        <span>Last observed at:<br></span>
-        <span> {{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].observedTime}}<br></span>
+        <span *ngIf="nasaGeoMagnetic">{{nasaGeoMagnetic.startTime}}<br></span>
+        <span *ngIf="!nasaGeoMagnetic">THERE ARE NO STORMS CURRENTLY<br></span>
+        <span *ngIf="nasaGeoMagnetic">Last observed at:<br></span>
+        <span *ngIf="nasaGeoMagnetic"> {{nasaGeoMagnetic.allKpIndex[nasaGeoMagnetic.allKpIndex.length - 1].observedTime}}<br></span>
       </div>
     </div>
   </mat-card-content>

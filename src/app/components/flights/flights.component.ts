@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Flight} from "../../models/flight";
 import {FlightService} from "../../services/flight.service";
+import {TabService} from "../../services/tab.service";
 
 @Component({
   selector: 'app-flights',
@@ -13,7 +14,7 @@ export class FlightsComponent implements OnInit {
   selecetdFlightdest: string = "";
   filteredFlightsList: Flight[] = []
 
-  constructor(private flightService: FlightService) {
+  constructor(private flightService: FlightService, public tab: TabService) {
 
   }
 
@@ -29,6 +30,7 @@ export class FlightsComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.tab.show();
     this.flightService.getAllFlights().subscribe((res: Flight[])=>{
       this.flights = res;
       this.filteredFlightsList = res;

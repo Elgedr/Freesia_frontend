@@ -1,6 +1,51 @@
-<nav mat-tab-nav-bar>
-  <a mat-tab-link href="/flights/">Flights</a>
-  <a mat-tab-link href="/ships/">Ships</a>
-</nav>
-<router-outlet></router-outlet>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+<div id="app" *ngIf="tab.visible">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">{{title | uppercase}}</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="/home">HOME </a>
+      </li>
+      <li class="nav-item">
+        <a href="/flights/" class="nav-link" routerLink="/flights/">FLIGHTS </a>
+      </li>
+      <li class="nav-item">
+        <a href="/ships/" class="nav-link" routerLink="/ships/">SHIPS </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="/register/">SIGN UP</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="/login/">LOGIN</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item" *ngIf="isAdmin">
+        <a class="nav-link" href="/adminboard" routerLink="adminboard">ADMIN BOARD</a>
+      </li>
+      <li class="nav-item">
+        <a>  |  </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile" routerLink="profile">
+          <i class="fa fa-user-circle">
+          </i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username | uppercase }}</a>
+      </li>
+      <li class="nav-item">
+        <a>  |  </a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LOGOUT</a>
+      </li>
+    </ul>
+  </nav>
+</div>
