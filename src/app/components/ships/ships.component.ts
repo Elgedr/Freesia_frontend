@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Ship} from "../../models/ship";
 import {ShipService} from "../../services/ship.service";
 import {TabService} from "../../services/tab.service";
+import {TokenStorageService} from "../../services/token-storage.service";
+import {AppComponent} from "../../app.component";
 
 @Component({
   selector: 'app-ships',
@@ -13,8 +15,11 @@ export class ShipsComponent implements OnInit {
   ships: Ship[] = [];
   numOfShipsInRow: number = 3;
   shipRows: number[] = [];
+  isLoggedIn = false;
 
-  constructor(private shipService: ShipService, public tab: TabService) {
+  constructor(private app: AppComponent, private shipService: ShipService, public tab: TabService, private tokenStorageService: TokenStorageService) {
+    if (tokenStorageService.getToken() != null &&
+    tokenStorageService.getToken() !== "undefined") this.isLoggedIn = app.isLoggedIn;
   }
 
   ngOnInit(): void {
