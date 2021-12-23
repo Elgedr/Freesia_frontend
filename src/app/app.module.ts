@@ -23,7 +23,6 @@ import { ShipcardComponent } from './components/shipcard/shipcard.component';
 import { FlightBookingComponent } from './components/flight-booking/flight-booking.component';
 import {MatIconModule} from "@angular/material/icon";
 import {SafePipeModule} from "safe-pipe";
-import {HttpClientModule} from "@angular/common/http";
 import { ShipDetailsComponent } from './components/ship-details/ship-details.component';
 import { SpaceWeatherWidgetComponent } from './components/space-weather-widget/space-weather-widget.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
@@ -45,6 +44,9 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthComponent } from './components/auth/auth.component';
 import {TabService} from "./services/tab.service";
+import {HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './helpers/auth.interceptor';
 
 // @ts-ignore
 @NgModule({
@@ -99,7 +101,12 @@ import {TabService} from "./services/tab.service";
     NzSpaceModule,
     NzCardModule
   ],
-  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title, TabService],
+  providers: [FligtcardComponent, FlightDetailsComponent, FlightsComponent, FlightService, ShipService, Title, TabService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 

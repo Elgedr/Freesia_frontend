@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
+import {TokenStorageService} from "../../services/token-storage.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -14,9 +16,10 @@ export class RegisterComponent implements OnInit {
   };
   isSuccessful = false;
   isSignUpFailed = false;
+  roles: string[] = [];
   errorMessage = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -26,8 +29,13 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(username, email, password).subscribe(
       data => {
+        console.log(data);
+        this.tokenStorage.saveToken(data.accessToken);
+        this.tokenStorage.saveUser(data);
+        this.roles = this.tokenStorage.getUser().roles;
         this.isSuccessful = true;
         this.isSignUpFailed = false;
+        this.router.navigateByUrl('/home');
       },
       err => {
         this.errorMessage = err.error.message;
